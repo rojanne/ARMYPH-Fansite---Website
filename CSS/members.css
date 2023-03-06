@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../Images/purple3.webp");
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    font-family: 'Signika Negative', sans-serif;
+    color: snow;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 30px 6%;
+}
+nav .logo {
+    width: 40px;
+    height: 60px;
+    margin-right: 15px;
+}
+nav h3 {
+    width: 200px;
+    font-size: 50px;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    color: snow;
+}
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: plum;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+button{
+    background-color: white;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-left: 50px;
+}
+button span{
+    display: block;
+    background-color: black;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background-color 0.5s, margin-left 0.5s;
+}
+.active{
+    background: white;
+}
+.active span{
+    background-color: mediumpurple;
+    margin-left: 31px;
+}
+.on{
+    background: white;
+}
+.font{
+    color: black;
+}
+.containerB{
+    background: rebeccapurple;
+}
+/*------------------------------footer----------------------*/
+footer{
+    background: black;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a i:hover {
+    color:magenta;
+    transform: scale(1.5);
+}
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+/*------------------mems header-------------------*/
+.mems-header{
+    margin:0 6%;
+    margin-top: 30px;
+    font-family: 'Signika Negative', sans-serif;
+    color: snow;
+    text-align: center;
+    justify-content: center;
+}
+.mems-header h1{
+    font-size: 50px;
+    font-weight: 900;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+.mems-header p{
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+/*--------------------mem picker-----------------------*/
+.random-game{
+    margin: 30px 5%;
+    text-align: center;
+    justify-content: center;
+}
+.random-game h1{
+    font-family: 'Signika Negative', sans-serif;
+    color: snow;
+    background-color: rebeccapurple;
+    text-align: center;
+}
+.random-game h4{
+    color: snow;
+    margin: 30px;
+    font-size: 26px;
+    background-color: rebeccapurple;
+}
+#pick{
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    border-radius: 50%;
+    border: 5px solid snow;
+    margin-bottom: 30px;
+    margin-left: -10px;
+    transition: scale 0.5s;
+}
+#pick:hover{
+    transform: scale(1.5);
+    background-color: purple;
+    border: 8px solid bisque;
+}
+#result{
+    margin-left: 32%;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 5px solid black;
+    background-color: white;
+}
+.result-img img{
+    text-align: center;
+    width: 100%;
+    height: 450px;
+    justify-items: center;
+}
+.name-result{
+    font-size: 30px;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 300;
+}
+/*------------mem-swiper-------------*/
+.swiper{
+    margin-top: 150px;
+    width: 90%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20, 20, 20) ;
+    border-radius: 15px 15px 0 0;
+}
+.swiper-slide img{
+    margin-left: 35%;
+    margin-top: 20px;
+    width: 450px;
+    height: 450px;
+    border: 2px solid white;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: snow;
+}
+.swiper .swiper-pagination-bullet-active{
+    background: white;
+}
+#imageSlider {
+    padding: 50px 6%;
+}
+/*--------------mem-content----------*/
+.mem-content{
+    margin: 0 5%;
+    font-family: 'Signika Negative', sans-serif;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(133, 38, 157);
+    border-radius: 0;
+}
+.mem-content p{
+    font-size: 20px;
+}
+.mem-socials{
+    background-color: rgb(20, 20, 20);
+    margin: -20px 5% 5%;
+    font-family: 'Signika Negative', sans-serif;
+    color: white;
+    height: 40px;
+    border-radius: 0 0 15px 15px;
+}
+.mem-socials ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.mem-socials li{
+    margin: 5px 20px;
+}
+.mem-socials a{
+    text-decoration: none;
+    color: white;
+}
+.mem-socials a i{
+    font-size: 30px;
+    transition: color .4s ease;
+}
+.mem-socials a i:hover {
+    color:magenta;
+    transform: scale(1.5);
+}
+.dark{
+    color: black;
+}
+/*---------------responsiveness-------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    nav h3{
+        font-size: 28px;
+    }
+    nav .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        background-color: rebeccapurple;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+        text-align: justify;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    button{
+        height: 30px;
+        width: 40px;
+        margin-left: 10px;
+    }  
+    button span{
+        height: 26px;
+        width: 20px;
+        margin-left: 0; 
+    }
+    .active span{
+        margin-left: 15px;
+    }
+    .mems-header{
+        margin:0 6%;
+        margin-top: 10px;
+    }
+    .mems-header h1{
+        font-size: 30px;
+        font-weight: 900;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    .mems-header p{
+        font-size: 16px; 
+        margin-bottom: 10px;
+    }
+    .swiper{
+        margin-top: 50px;
+        width: 90%;
+        height: 300px;
+        align-items: center;
+    }
+    .swiper-slide img{
+        margin-left: 20%;
+        margin-top: 20px;
+        width: 200px;
+        height: 250px;
+    }
+    .swiper .swiper-button-prev, .swiper .swiper-button-next{
+        color: snow;
+    }
+    .swiper .swiper-pagination-bullet-active{
+        background: white;
+    }
+    #imageSlider {
+        padding: 30px 6%;
+    }
+    .mem-content p{
+        font-size: 16px;
+    }
+    .mem-socials{
+        height: 30px;
+    }
+    .mem-socials li{
+        margin: 5px 20px;
+    }
+    .mem-socials a i{
+        font-size: 22px;
+    }
+    .random-game{
+        margin: 30px 5%;
+    }
+    .random-game h4{
+        margin: 30px;
+        font-size: 25px;
+    }
+    #pick{
+        width: 80px;
+        height: 80px;
+    }
+    #result{
+        margin-left: 5%;
+        width: 90%;
+        height: 300px;
+    }
+    .result-img img{
+        width: 100%;
+        height: 260px;
+    }
+    .name-result{
+        font-size: 20px;
+    }
+    footer{
+        height: auto;
+        width: 100%;
+        padding-top: 2px;
+    }
+    .footer-content h3{
+        font-size: 24px;
+    }
+    .footer-content{
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
+    .footer-content p{
+        max-width: auto;
+        margin: 5px 2px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .footer-bottom{
+        width: 100%;
+        padding: 5px 0;
+    }
+    .footer-bottom p{
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+    }
+}

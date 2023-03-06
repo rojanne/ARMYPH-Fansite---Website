@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../Images/purple3.webp");
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    font-family: 'Signika Negative', sans-serif;
+    color: snow;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 30px 6%;
+}
+nav .logo {
+    width: 40px;
+    height: 60px;
+    margin-right: 15px;
+}
+nav h3 {
+    width: 200px;
+    font-size: 50px;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    color: snow;
+}
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: plum;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+button{
+    background-color: white;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-left: 50px;
+}
+button span{
+    display: block;
+    background-color: black;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background-color 0.5s, margin-left 0.5s;
+}
+.active{
+    background: white;
+}
+.active span{
+    background-color: mediumpurple;
+    margin-left: 31px;
+}
+.on{
+    background: white;
+}
+.font{
+    color: black;
+}
+.containerB{
+    background: rebeccapurple;
+}
+/*-----form----*/
+
+#form {
+    width: 600px;
+    height: auto;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: mistyrose;
+    border-radius: 4px;
+    font-size: 20px;
+}
+#form h1{
+    color: purple;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.input-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.input-content input, .input-content textarea{
+    border: 2px solid black;
+    border-radius: 4px;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+}
+.input-content input:focus, .input-content textarea:focus{
+    outline: 0;
+}
+.input-content.success input{
+    border-color: mediumslateblue;
+}
+.input-content.error input{
+    border-color: red;
+}
+.input-content .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+    height: 13px;
+}
+#form button{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 4px;
+    margin-left: 0;
+    font-size: 16px;
+}
+.form-light{
+    border: 2px solid purple;
+}
+footer{
+    background: black;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a i:hover {
+    color:magenta;
+    transform: scale(1.5);
+}
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.popup{
+    width: 400px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.5s, top 0.4s;
+}
+.popup img{
+    width: 250px;
+    height: 200px;
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: purple;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+/*---------------responsiveness-------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    nav h3{
+        font-size: 28px;
+    }
+    nav .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        background-color: rebeccapurple;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+        text-align: justify;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    button{
+        height: 30px;
+        width: 40px;
+        margin-left: 10px;
+    }  
+    button span{
+        height: 26px;
+        width: 20px;
+        margin-left: 0; 
+    }
+    .active span{
+        margin-left: 15px;
+    }
+    #form {
+        width: 350px;
+        height: auto;
+        margin: 20px 10px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    #form h1{
+        color: purple;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .input-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .input-content input, .input-content textarea{
+        border: 2px solid black;
+        border-radius: 4px;
+        display: block;
+        font-size: 18px;
+        padding: 5px;
+        width: 100%;
+    }
+    .popup{
+        width: 350px;
+        background-color: white;
+    }
+    .popup img{
+        width: 200px;
+        height: 200px;
+    }
+    .popup h2{
+        font-size: 28px;
+    }
+    footer{
+        height: auto;
+        width: 100%;
+        padding-top: 2px;
+    }
+    .footer-content h3{
+        font-size: 24px;
+    }
+    .footer-content{
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
+    .footer-content p{
+        max-width: auto;
+        margin: 5px 2px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .footer-bottom{
+        width: 100%;
+        padding: 5px 0;
+    }
+    .footer-bottom p{
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+}

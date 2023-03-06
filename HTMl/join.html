@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Page</title>
+    <link rel="stylesheet" href="../CSS/join.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Signika+Negative:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="body">
+    <div class="container" id="container">
+        <nav>
+            <img src="../Images/army3.jpg" class="logo">
+            <h3>ARMY PH</h3>
+            <ul id="side">
+                <li><a href="../index.html" id="list1">Home</a></li>
+                <li><a href="join.html" id="list2">Join Army</a></li>
+                <li><a href="about.html" id="list3">About BTS</a></li>
+                <li><a href="members.html" id="list4">Members</a></li>
+                <li><a href="music.html" id="list5">Music</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            <button type="button" onclick="toggleBtn()" id="button"><span></span></button>
+        </nav>
+    </div>
+    <div class="form-container">
+        <form id="form" action="/">
+            <h1>BE AN ARMY NOW</h1>
+            <div class="input-content">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name">
+                <div class="error"></div>
+            </div>
+            <div class="input-content">
+                <label for="province">Province</label>
+                <input type="text" id="province" placeholder="Your province">
+                <div class="error"></div>
+            </div>
+            <div class="input-content">
+                <label for="email">email</label>
+                <input type="text" id="email" placeholder="Your email">
+                <div class="error"></div>
+            </div>
+            <div class="input-content">
+                <label for="letter">Message</label>
+                <textarea id="letter" rows="4" placeholder="Your message here."></textarea>
+                <div class="error"></div>
+            </div>
+            <button type="submit">Submit</button>
+            <div class="popup" id="popup">
+                <img src="../Images/tick.png">
+                <h2>Thank You!</h2>
+                <p>Your details has been successfully submitted.</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </form>
+    </div>
+    <!----------------------------footer--------------------------->
+    <footer>
+        <div class="footer-content">
+            <h3>ARMY PH</h3>
+            <p>For suggestions and comments, please cotact me through these
+                socials. Thank you!</p>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/rojanne.gelomina.50"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/PinkangBukas"><i class="fa-brands fa-twitter"></i></i></a></li>
+                    <li><a href="https://www.instagram.com/rojaaane/"><i class="fa-brands fa-instagram"></i></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCihCqxhq9ktCMf1KcLJ66Zg"><i class="fa-brands fa-youtube"></i></i></a></li>
+                </ul>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>copyright &copy; ARMY PH. designed by <span>anneScherbatsky</span></p>
+        </div>
+    
+    </footer>
+
+    <script src="../JS/submit.js"></script>
+    <script src="../JS/join.js"></script> 
+</body>
+</html>

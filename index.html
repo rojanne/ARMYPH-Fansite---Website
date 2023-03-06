@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Project</title>
+    <link rel="stylesheet" href="CSS/indexStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Signika+Negative:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="body">
+    <div class="container" id="container">
+        <nav>
+            <img src="Images/army3.jpg" class="logo">
+            <h3>ARMY PH</h3>
+            <ul id="sidemenu">
+                <li><a href="index.html" id="list1">Home</a></li>
+                <li><a href="HTMl/join.html" id="list2">Join Army</a></li>
+                <li><a href="HTMl/about.html" id="list3">About BTS</a></li>
+                <li><a href="HTMl/members.html" id="list4">Members</a></li>
+                <li><a href="HTMl/music.html" id="list5">Music</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+        </nav>
+    </div>
+    <div id="imageSlider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="Images/bts2.jpg"></div>
+                <div class="swiper-slide"><img src="Images/bts3.webp"></div>
+                <div class="swiper-slide"><img src="Images/bts7.webp"></div>
+                <div class="swiper-slide"><img src="Images/bts8.jpg"></div>
+                <div class="swiper-slide"><img src="Images/bts1.webp"></div>
+                <div class="swiper-slide"><img src="Images/bts4.webp"></div>
+                <div class="swiper-slide"><img src="Images/bts5.webp"></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    
+    <!-----------------join section----------->
+    <div id="join">
+        <div class="join-container">
+            <h1 class="invite">Do you want to join ARMY PH?</h1>
+            <div class="reasons-list">
+                <div class="reasons">
+                    <img src="Images/fans.webp">
+                    <div class="layer">
+                        <h3>ARMY Friends</h3>
+                        <p>You can find new friends here that have the same interests as you.</p>
+                    </div>
+                </div>
+                <div class="reasons">
+                    <img src="Images/news1.jpg">
+                    <div class="layer">
+                        <h3>Latest News</h3>
+                        <p>You'll get the latest news and information about BTS.</p>
+                    </div>
+                </div>
+                <div class="reasons">
+                    <img src="Images/music.jpg">
+                    <div class="layer">
+                        <h3>Good Music</h3>
+                        <p>We can share and listen to BTS songs together.</p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="join-button"><a href="HTMl/join.html">Join now</a></button>
+        </div>
+    </div>
+<!-----------------------about section----------------------------->
+    <div id="about">
+        <div class="about-container" id="about-content">
+            <div class="row">
+                <div class="about-col-1">
+                    <img onmouseover="newImage()" onmouseout="oldImage()" src="Images/portrait3.jpg" id="image1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About BTS</h1>
+                    <p>BTS, an acronym of Bangtan Sonyeondan or “Beyond the Scene,” is a Grammy-nominated South Korean group
+                         that has been capturing the hearts of millions of fans globally since its debut in June 2013.......</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('history')">History</p>
+                        <p class="tab-links" onclick="opentab('awards')">Awards</p>
+                        <p class="tab-links" onclick="opentab('news')">News</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="history">
+                        <ul>
+                            <li><span>2010-2014</span><br>Formation and early years.</li>
+                            <li><span>2014-2017</span><br>Mainstream breakthrough and commercial success</li>
+                            <li><span>2018-2020</span><br>Love Yourself Album Series</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="awards">
+                        <ul>
+                            <li><span>2021</span><br>American Music Award for Artist of the Year</li>
+                            <li><span>2019-2022</span><br>American Music Award for Favorite Pop Duo/Group</li>
+                            <li><span>2019-2022</span><br>MTV Video Music Award for Best Group</li>
+                            <li><span>2019-2021</span><br>MAMA Award for Song of the Year</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="news">
+                        <ul>
+                            <li><span>Military Enlistment</span><br>BTS members will enlist in military from 2022-2025.</li>
+                            <li><span>Music Releases</span><br>Namjoon released his first solo album titled "Indigo".</li>
+                            <li><span>Others</span><br>BTS' j-hope surpasses 1 billion cumulative streams on Spotify</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="more"><a href="HTMl/about.html">Read More</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------------------------------Members Section-------------------------------->
+    <div class="members">
+        <h1>Members of BTS</h1>
+        <button class="pre-btn"><i class="fa-solid fa-less-than"></i></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-greater-than"></i></button>
+        <div class="slide-container">
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="Images/rm.avif"  class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">RM</h2>
+                            <p class="description">Kim Nam-joon (Korean: 김남준; born September 12, 1994), known professionally as RM (formerly Rap Monster),
+                            is a South Korean rapper, singer-songwriter and record producer. He is the leader of the South Korean boy band BTS.</p>
+                            <button class="mbutton"><a href="HTML/members.html">View More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="Images/jin4.webp"  class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Jin</h2>
+                            <p class="description">Kim Seok-jin (Korean: 김석진; born December 4, 1992),
+                                 also known professionally as Jin, is a South Korean singer, songwriter, and member of the South Korean boy band BTS.</p>
+                                 <button class="mbutton"><a href="HTML/members.html">View More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="Images/suga5.avif"  class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Suga</h2>
+                            <p class="description">Min Yoon-gi (Korean: 민윤기; born March 9, 1993), known professionally by his stage names Suga (stylized in all caps) 
+                                and Agust D,[A] is a South Korean rapper, songwriter and record producer.</p>
+                                <button class="mbutton"><a href="HTML/members.html">View More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="Images/hobi6.jpg"  class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">J-hope</h2>
+                            <p class="description">Jung Ho-seok (Korean: 정호석; born February 18, 1994), better known by his stage name
+                                 J-Hope (stylized as j-hope), is a South Korean rapper, singer-songwriter, dancer, and record producer. </p>
+                                 <button class="mbutton"><a href="HTML/members.html">View More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="Images/jimin5.jpg"  class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Jimin</h2>
+                            <p class="description">Park Ji-min (Korean: 박지민; born October 13, 1995), known mononymously as Jimin, is a South Korean singer and dancer. In 2013, 
+                                he made his debut as a member of the South Korean boy band BTS, under the record label Big Hit Entertainment.</p>
+                                <button class="mbutton"><a href="HTML/members.html">View More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="Images/v3.jpg"  class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">V</h2>
+                            <p class="description">Kim Tae-hyung (Korean: 김태형; born December 30, 1995),[1] also known professionally as V, 
+                                is a South Korean singer and a member of the boy band BTS.</p>
+                                <button class="mbutton"><a href="HTML/members.html">View More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="Images/jk2.jpeg"  class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Jungkook</h2>
+                            <p class="description">Jeon Jung-kook (Korean: 전정국; born September 1, 1997), known mononymously as Jungkook (stylized as Jung Kook), is a South Korean singer.
+                                 He is the youngest member and vocalist of the South Korean boy band BTS.</p>
+                                 <button class="mbutton"><a href="HTML/members.html">View More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------------------------------------footer-------------------------------->  
+    <footer>
+        <div class="footer-content">
+            <h3>ARMY PH</h3>
+            <p>For suggestions and comments, please cotact me through these
+                socials. Thank you!</p>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/rojanne.gelomina.50"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/PinkangBukas"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/rojaaane/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCihCqxhq9ktCMf1KcLJ66Zg"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>copyright &copy; ARMY PH. designed by <span>anneScherbatsky</span></p>
+        </div>
+    
+    </footer>
+    
+    <script src="JS/indexJS.js"></script>
+    <script src="JS/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
+
+
+    
+    <script>
+    swiper = new Swiper('.swiper', {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction:false
+    },
+    loop: true,
+    pagination: {
+        clickable: true,
+        el: '.swiper-pagination',},
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'},
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,667 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../Images/purple3.webp");
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    font-family: 'Signika Negative', sans-serif;
+    color: snow;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 30px 6%;
+}
+nav .logo {
+    width: 40px;
+    height: 60px;
+    margin-right: 15px;
+}
+nav h3 {
+    width: 200px;
+    font-size: 50px;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    color: snow;
+}
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: plum;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+button{
+    background-color: white;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-left: 50px;
+}
+button span{
+    display: block;
+    background-color: black;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background-color 0.5s, margin-left 0.5s;
+}
+.active{
+    background: white;
+}
+.active span{
+    background-color: mediumpurple;
+    margin-left: 31px;
+}
+.on{
+    background: white;
+}
+.font{
+    color: black;
+}
+.containerB{
+    background: rebeccapurple;
+}
+/*--------------image slider----------------------*/
+.swiper{
+    width: 94%;
+    height: 500px;
+    align-items: center;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 800px;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: indigo;
+}
+.swiper .swiper-pagination-bullet-active{
+    background: indigo;
+}
+#imageSlider {
+    padding: 50px 6%;
+}
+/*------------------------------footer----------------------*/
+footer{
+    background: black;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a i:hover {
+    color:magenta;
+    transform: scale(1.5);
+}
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+/*---------------join page---------*/
+#join{
+    margin-top: 20px;
+    padding: 50px 6%;
+    font-family: 'Signika Negative', sans-serif;
+    color: snow;
+}
+.join-container h1{
+    background: black;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+}
+.reasons-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.reasons img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.reasons{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #DB7093);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 18px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.reasons:hover img{
+    transform: scale(1.1);
+}
+.reasons:hover .layer{
+    height: 100%;
+}
+.join-button{
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 43%;
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+    background: black;
+    transition: 0.5s;
+}
+.join-button:hover{
+    transform: scale(1.5);
+}
+.join-button a{
+    font-size: 27px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: 'Signika Negative', sans-serif;
+    color: snow;
+}
+/*-----------------------About section-----------------------*/
+#about{
+    padding: 80px 0;
+    margin: 20px 6%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 img{
+    width: 100%;
+    height: 550px;
+    border-radius: 15px;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.subtitle{
+    margin-top: 20px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: snow;
+}
+.about-col-2 p{
+    font-family: 'Signika Negative', sans-serif;
+    color: lavenderblush;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: lightcoral;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    font-size: 18px;
+    margin: 10px 0;
+    color: snow;
+}
+.tab-contents ul li span{
+    color: lightcoral;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.more{
+    margin-top: 30px;
+    margin-left: 0;
+    width: 100px;
+    border-radius: 4px;
+    background-color: lightcoral;
+    transition: 0.5s;
+}
+.more a{
+    text-decoration: none;
+    font-size: 16px;
+    color: snow;
+}
+.more:hover{
+    transform: scale(1.1);
+    background-color: magenta;
+    transition: 0.7s;
+}
+.white-font{
+    background-color: rebeccapurple;
+    border-radius: 10px;
+}
+/*------------------members section---------------------*/
+.members{
+    margin: 30px 6%;
+    font-family: 'Signika Negative', sans-serif;
+    position: relative;
+}
+.slide-container{   
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-bottom: 100px;
+}
+.slide-content{
+    margin: 0 40px;
+    height: 450px;
+}
+.card{
+    width: 320px;
+    border-radius: 25px;
+    background-color: rgb(22, 21, 21);  
+}
+.card-content{
+    height: 200px;
+}
+.image-content, .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    row-gap: 5px;
+    position: relative;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: violet;
+    left: 0;
+    top: 0;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before, .overlay::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: violet;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: rgb(22, 21, 21);
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: black;
+    padding: 3px;
+}
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid lightseagreen;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: lightgoldenrodyellow;
+    margin-bottom: 5px;
+}
+.description{
+    font-size: 14px;
+    color: snow;
+    text-align: center;
+}
+.mbutton{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: rgb(206, 97, 206);
+    border-radius: 6px;
+    margin: 14px;
+    width: 130px;
+    transition: all 0.3s ease;
+}
+.mbutton a{
+    text-decoration: none;
+    color: white;
+}
+.mbutton:hover{
+    background: purple;
+}
+.pre-btn,
+.nxt-btn{
+    border: none;
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 250px;
+    font-size: 30px;
+    font-weight: 900;
+    color: snow;
+    background-color: black;
+    z-index: 9;
+    border-radius: 10%;
+}
+.pre-btn{
+    left: -50px;
+}
+.nxt-btn{
+    right: -50px;
+}
+.slide-container::-webkit-scrollbar{
+    display: none;
+}
+.members h1{
+    color: snow;
+    background-color: black;
+    padding: 6px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/*---------------responsiveness-------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    nav h3{
+        font-size: 28px;
+    }
+    nav .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        background-color: rebeccapurple;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+        text-align: justify;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .swiper{
+        width: 94%;
+        height: 200px;
+        align-items: center;
+    }
+    .swiper-slide img{
+        width: 100%;
+        height: 200px;
+    }
+    button{
+        height: 30px;
+        width: 40px;
+    }  
+    button span{
+        height: 26px;
+        width: 20px;
+        margin-left: 0; 
+    }
+    .active span{
+        margin-left: 15px;
+    }
+    #join{
+        margin-top: 5px;
+    }
+    .join-container h1{
+        font-size: 25px;
+    }
+    .reasons img{
+        width: 100%;
+        height: 200px;
+    }
+    .reasons-list{
+        grid-gap: 40px;
+        margin-top: 20px;
+    }
+    .join-button{
+        margin-top: 30px;
+        margin-left: 30%;
+        width: 120px;
+        height: 25px;
+    }
+    .join-button a{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    #about{
+        padding: 10px 0;
+        margin: 10px 6%;
+    }
+    .subtitle{
+        margin-top: 10px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .about-col-2{
+        text-align: justify;
+    }
+    .about-col-2 p{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .about-col-1 img{
+        width: 100%;
+        height: 450px;
+    }
+    .more{
+        margin-top: 20px;
+        margin-left: 0;
+        width: 80px;
+    }
+    .more a{
+        font-size: 12px;   
+    }
+    .members{
+        margin: 20px 6%;
+    }
+    .members h1{
+        padding: 4px;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .slide-container{   
+        margin-bottom: 20px;
+    }
+    .slide-content{
+        margin: 0 10px;
+        height: 450px;
+    }
+    .pre-btn,
+    .nxt-btn{
+    height: 40px;
+    width: 30px;
+    margin-top: 250px;
+    font-size: 20px;
+    font-weight: 900;
+    }
+    .pre-btn{
+        left: -70px;
+    }
+    .nxt-btn{
+        right: -30px;
+    }
+    .card{
+        width: 310px;  
+    }
+    footer{
+        height: auto;
+        width: 100%;
+        padding-top: 2px;
+    }
+    .footer-content h3{
+        font-size: 24px;
+    }
+    .footer-content{
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
+    .footer-content p{
+        max-width: auto;
+        margin: 5px 2px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .footer-bottom{
+        width: 100%;
+        padding: 5px 0;
+    }
+    .footer-bottom p{
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+    }
+}
